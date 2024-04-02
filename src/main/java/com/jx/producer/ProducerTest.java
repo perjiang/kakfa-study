@@ -18,7 +18,7 @@ public class ProducerTest {
         KafkaProducer<String,String> producer = new KafkaProducer<>(properties);
         // 指定一个消息
         String topicName = "perjson";
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 1000; i++) {
             String key = "key" + i;
             String value = "value" + i;
             ProducerRecord<String,String> record = new ProducerRecord<>(topicName,key,value);
